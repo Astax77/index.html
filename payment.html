@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="payment.css">
+    <script src="scripts.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payement page</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Page</title>
+</head>
+<body>
+
+  <div class="payment-container">
+    <div class="step-indicator">
+      <span>Shopping</span>
+      <span class="active">Payment</span>
+      <span>Checkout</span>
+    </div>
+
+    <h3>Select a payment method</h3>
+    <div class="payment-methods">
+      <img src="https://img.icons8.com/color/48/000000/paypal.png" alt="PayPal">
+      <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" alt="MasterCard">
+      <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa">
+    </div>
+
+    <div class="card-details">
+      <input type="text" placeholder="Name on card">
+      <input type="text" placeholder="Card Number">
+      <input type="text" placeholder="MM/YY">
+      <input type="text" placeholder="CVC">
+    </div>
+
+    <div class="save-card">
+      <input type="checkbox" id="save">
+      <label for="save">Save this card</label>
+    </div>
+
+    <div class="price-section">
+    </div>
+
+    <button onclick="payNow()">Pay Now</button>
+  </div>
+
+  <script>
+    function payNow() {
+      alert("Redirecting to payment gateway...");
+      window.location.href = "https://example.com/checkout-success";
+    }
+  </script>
+
+</body>
+</html>
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping Page</title>
+</head>
+<body>
+
+  <h1>Shopping Page</h1>
+
+  <!-- Products -->
+  <div>
+    <p>Espresso - $<span>4.00</span> 
+      <button onclick="addToCart(4.00)">Add</button></p>
+
+    <p>Latte - $<span>5.50</span> 
+      <button onclick="addToCart(5.50)">Add</button></p>
+
+    <p>Cappuccino - $<span>6.25</span> 
+      <button onclick="addToCart(6.25)">Add</button></p>
+  </div>
+
+  <hr>
+
+  <!-- Show Total -->
+  <h2>Total: $<span id="total">0.00</span></h2>
+
+  <!-- 🟩 Checkout Button -->
+  <a id="checkoutBtn" href="#">Go to Payment</a>
+
+  <!-- JavaScript -->
+  <script>
+    let total = 0;
+
+    function addToCart(price) {
+      total += price;
+      document.getElementById('total').textContent = total.toFixed(2);
+      updateCheckoutLink();
+    }
+
+    function updateCheckoutLink() {
+      const paymentURL = `payment.html?total=${total.toFixed(2)}`;
+      document.getElementById('checkoutBtn').href = paymentURL;
+    }
+  </script>
+
+</body>
+</html>
